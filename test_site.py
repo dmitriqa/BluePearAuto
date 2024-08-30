@@ -19,6 +19,7 @@ def test_authorization(driver):
     logo = driver.find_element(By.XPATH, '//img[@class="cursor-pointer w-[111px]"]')
     assert logo.get_attribute('src') == 'https://app.bluepear.net/logo.svg'
 
+
 def test_wrong_username(driver):
     driver.get('https://app.bluepear.net/auth')
     field_email = driver.find_element(By.NAME, 'email')
